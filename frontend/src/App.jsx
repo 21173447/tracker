@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NavBar";
 import Form from "./components/Form";
-import ViewIssues from "./components/ViewIssues";
+import IssuesPage from "../src/pages/IssuesPage";
+import HomePage from "../src/pages/HomePage";
 
 function App() {
   return (
@@ -9,9 +10,9 @@ function App() {
       <Navbar />
       <div className="p-6">
         <Routes>
-          <Route path="/" element={<Form />} />             {/* Home / Create Issue */}
-          <Route path="/create" element={<Form />} />      {/* Create Issue */}
-          <Route path="/issues" element={<ViewIssues />} /> {/* View Issues */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/create" element={<Form />} />
+          <Route path="/issues" element={<IssuesPage />} />
         </Routes>
       </div>
     </Router>

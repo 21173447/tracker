@@ -10,12 +10,12 @@ export default function ViewIssues() {
     status: "Open",
   });
 
-  // Load issues on mount
+ 
   useEffect(() => {
     fetchIssues();
   }, []);
 
-  // Start editing an issue
+
   const handleEdit = (issue) => {
     setEditingId(issue._id);
     setFormData({

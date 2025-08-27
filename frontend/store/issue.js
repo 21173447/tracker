@@ -38,7 +38,7 @@ export const useIssueStore = create((set, get) => ({
     return data;
   },
 
-  // Update existing issue
+
   updateIssue: async (id, updatedData) => {
     try {
       const res = await fetch(`/api/issues/${id}`, {
@@ -52,8 +52,6 @@ export const useIssueStore = create((set, get) => ({
       if (!res.ok) {
         throw new Error(data.message || "Failed to update issue");
       }
-
-      // Update state locally
       set({
         issues: get().issues.map((issue) =>
           issue._id === id ? data.data : issue
