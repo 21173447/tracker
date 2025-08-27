@@ -1,14 +1,20 @@
-import { useState } from "react"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/NavBar";
 import Form from "./components/Form";
-import './App.css';
+import ViewIssues from "./components/ViewIssues";
 
 function App() {
-  const [count, setCount] = useState(0); 
-
   return (
-    <>
-      <Form />
-    </>
+    <Router>
+      <Navbar />
+      <div className="p-6">
+        <Routes>
+          <Route path="/" element={<Form />} />             {/* Home / Create Issue */}
+          <Route path="/create" element={<Form />} />      {/* Create Issue */}
+          <Route path="/issues" element={<ViewIssues />} /> {/* View Issues */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
