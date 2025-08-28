@@ -10,8 +10,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-
-        {/* Content area grows to fill space */}
+       
         <main className="flex-grow p-6">
           <Routes>
             <Route path="/" element={<HomePage />} />

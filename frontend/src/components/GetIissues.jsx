@@ -105,7 +105,7 @@ export default function ViewIssues() {
         <p className="text-gray-600">Manage and track all your project issues</p>
       </div>
 
-      {/* Search */}
+
       <div className="bg-white rounded-xl shadow-sm p-5 mb-6 border border-gray-100">
         <div className="relative w-full md:w-1/3">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
@@ -127,7 +127,7 @@ export default function ViewIssues() {
         </div>
       </div>
 
-      {/* Kanban Board */}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {statuses.map((status) => (
           <div key={status} className="bg-gray-50 rounded-xl shadow-sm border border-gray-200">
@@ -167,7 +167,7 @@ export default function ViewIssues() {
               </button>
             </div>
 
-            {/* Issues List */}
+   
             {expandedColumns[status] && (
               <div className="p-4 space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto">
                 {getIssuesByStatus(status).length === 0 ? (
