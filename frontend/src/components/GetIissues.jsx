@@ -131,7 +131,6 @@ export default function ViewIssues() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {statuses.map((status) => (
           <div key={status} className="bg-gray-50 rounded-xl shadow-sm border border-gray-200">
-            {/* Column Header */}
             <div 
               className={`p-4 rounded-t-xl border-b flex justify-between items-center cursor-pointer ${
                 status === "Open" 
