@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/server.js"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm run dev"
   },
   "type": "module",
   "keywords": [],
@@ -16,6 +18,7 @@
     "mongoose": "^8.18.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "nodemon": "^3.1.10"
   }
 }
